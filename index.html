@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba JavaScript - Conversor de Monedas</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <h1>Conversor de Monedas con JavaScript</h1>
+    <div class="contenedor">
+        
+        <!-- Input para ingresar cantidad de pesos chilenos a convertir -->
+        <label for="dinero">Ingrese el monto en CLP</label>
+        <input type="number" name="dinero" id="dinero" placeholder="150000">
+        
+        <!-- Select para elegir moneda a convertir -->
+        <label for="selectCurrency">Moneda a convertir:</label>
+        <select name="selectCurrency" id="selectCurrency">
+            <!-- Implementacion de mas de 2 monedas -->
+            <option value="">----</option> 
+            <option value="dolar">USD</option>
+            <option value="dolar_intercambio">USD Trade</option>
+            <option value="euro">Euro</option>
+            <option value="libra_cobre">Libra de Cobre</option>
+            <option value="uf">UF</option>
+            <option value="utm">UTM</option>
+            <option value="bitcoin">Bitcoin</option>
+        </select>
+
+        <!-- Boton para iniciar el proceso de consulta y renderizacion de datos -->
+        <button id="btn-buscar">Buscar</button>
+        <h2></h2>
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+    <!-- Script de Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Script js -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
