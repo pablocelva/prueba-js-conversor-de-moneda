@@ -98,7 +98,7 @@ const handleClick = async () => {
         console.error("Error fetching or processing data: ", error)
         //alert("Hubo un error al obtener los datos. Por favor, intente nuevamente.")
         errorMensaje.innerText = "*Hubo un error al obtener los datos. Por favor, intente nuevamente."
-        errorMensaje.computedStyleMap.display = "block"
+        errorMensaje.style.display = "block"
     }
 }
 
