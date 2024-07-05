@@ -5,12 +5,17 @@ let currentChart = null
 const handleClick = async () => {
     const select = document.querySelector("#selectCurrency")
     const dinero = document.querySelector("#dinero")
+    const errorMensaje = document.querySelector("#errorMensaje")
 
     //Asegurarse de que estan ambos campos completos
     if (!select.value || !dinero.value) {
-        alert("Por favor, complete todos los campos antes de continuar")
+        //alert("Por favor, complete todos los campos antes de continuar")
+        errorMensaje.innerText = "*Por favor, complete todos los campos antes de continuar"
+        errorMensaje.style.display = "block"
         return
     }
+    //Ocultar mensaje de error si estan completos los campos
+    errorMensaje.style.display = "none"
 
     //Obtener datos desde API mindicador.cl
     const endpoint = "https://mindicador.cl/api/" + select.value
@@ -91,7 +96,9 @@ const handleClick = async () => {
         //Captura de errores al intentar fetch
     } catch(error) {
         console.error("Error fetching or processing data: ", error)
-        alert("Hubo un error al obtener los datos. Por favor, intente nuevamente.")
+        //alert("Hubo un error al obtener los datos. Por favor, intente nuevamente.")
+        errorMensaje.innerText = "*Hubo un error al obtener los datos. Por favor, intente nuevamente."
+        errorMensaje.computedStyleMap.display = "block"
     }
 }
 

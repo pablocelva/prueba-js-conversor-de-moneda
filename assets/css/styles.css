@@ -53,6 +53,12 @@ canvas {
     height: 400px;
 }
 
+.error {
+    color: red;
+    /* font-weight: bold; */
+    display: none;
+}
+
 
 @media (max-width: 576px) {
     .contenedor{
